@@ -1,0 +1,21 @@
+{
+    "raw_metrics": {
+        "control_diff": 0.0034678532252603866,
+        "threat_diff": 0.0982146001977986,
+        "strategic_diff": 0.0,
+        "hybrid_diff": 4.509212630126315,
+        "graph_diff": 4.610895083549375,
+        "eval_diff": 1.3199999999999994,
+        "eval1": -6.47,
+        "eval2": -5.15
+    },
+    "normalized_graph_metrics": {
+        "control_diff": 0.004227054652873403,
+        "threat_diff": 0.044250080618929814,
+        "strategic_diff": 0.0,
+        "hybrid_diff": 0.2764403549054341
+    },
+    "aggregate_normalized_graph_diff": 0.3249174901772373,
+    "engine_eval_diff": 1.3199999999999994,
+    "combined_score": 1.6449174901772368
+}
