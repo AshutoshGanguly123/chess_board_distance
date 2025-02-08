@@ -256,7 +256,7 @@ def generate_random_positions(num_positions=50, depth=10, max_attempts=200):
 
 def compute_similarity_metrics(position1, position2):
     try:
-        # Compute graph-based metrics
+        # Compute graph-based metrics for each board pair
         control_graph1   = control_functor(position1)
         threat_graph1    = threat_functor(position1)
         strategic_graph1 = strategic_functor(position1)
@@ -277,17 +277,17 @@ def compute_similarity_metrics(position1, position2):
         strategic_score2 = strategic_refinement(strategic_graph2)
         hybrid_score2    = hybrid_refinement([control_graph2, threat_graph2, strategic_graph2])
         
-        # Graph-based similarity (sim score) based solely on the four metrics:
+        # Graph-based similarity (our sim score) based solely on the four metrics:
         control_diff   = abs(control_score1 - control_score2)
         threat_diff    = abs(threat_score1 - threat_score2)
         strategic_diff = abs(strategic_score1 - strategic_score2)
         hybrid_diff    = abs(hybrid_score1 - hybrid_score2)
         graph_diff = control_diff + threat_diff + strategic_diff + hybrid_diff
         
-        # Engine evaluation differences computed separately
+        # Compute engine evaluations separately
         eval1 = normalize_eval(evaluator(position1))
         eval2 = normalize_eval(evaluator(position2))
-        # Discard pair if evals disagree on winning side
+        # Discard pair if evaluations disagree on the winning side
         if eval1 * eval2 < 0:
             return None
         eval_diff = abs(eval1 - eval2)
@@ -307,7 +307,7 @@ def compute_similarity_metrics(position1, position2):
         return None
 
 def visualize_positions(position1, position2):
-    # Increase size parameter to produce larger SVG boards
+    # Increase board size to 800 for full-screen view
     svg1 = chess.svg.board(position1.board, size=800)
     svg2 = chess.svg.board(position2.board, size=800)
     return svg1, svg2
@@ -327,12 +327,11 @@ def run_experiments(num_positions=50, depth=10, num_sample_pairs=200, top_n=10):
     Generate random positions, compute similarity metrics on random pairs,
     normalize the graph-based metrics using pre-calculated bounds (from metric_bounds.json),
     compute an aggregate normalized graph difference (excluding engine eval),
-    combine it with the engine eval difference to compute a final combined score,
-    and then filter out pairs where the engine evals do not agree on the winning side.
-    Finally, sort all comparisons by the combined score and save each comparison's boards and metrics
+    combine it with the engine eval difference to compute a final combined score.
+    Only pairs that have the same engine eval direction are retained.
+    Then sort all comparisons by the combined score and save each comparison's boards and metrics
     into separate folders.
-    Additionally, plot a regression graph (scatter plot with a regression line)
-    comparing the aggregate normalized graph difference and the engine eval difference.
+    Additionally, plot a regression graph for all comparisons.
     """
     base_output_dir = "/Users/ashutoshganguly/Desktop/Research Papers/abid_ashutosh_papers/chess_board_distance/deepseekr1/"
     os.makedirs(base_output_dir, exist_ok=True)
@@ -376,10 +375,9 @@ def run_experiments(num_positions=50, depth=10, num_sample_pairs=200, top_n=10):
             norm_metrics[key] = normalize_metric(comp["raw_metrics"][key], lower, upper)
         comp["normalized_graph_metrics"] = norm_metrics
         comp["aggregate_norm_graph"] = sum(norm_metrics.values())
-        # Engine eval difference is already computed (and stored in raw_metrics)
         comp["eval_diff"] = comp["raw_metrics"]["eval_diff"]
     
-    # Compute a combined score: here we simply add the aggregate normalized graph score and the engine eval diff.
+    # Compute a combined score: sum of aggregate normalized graph diff and engine eval diff
     for comp in comparisons:
         comp["combined_score"] = comp["aggregate_norm_graph"] + comp["eval_diff"]
     
@@ -404,7 +402,7 @@ def run_experiments(num_positions=50, depth=10, num_sample_pairs=200, top_n=10):
         os.makedirs(folder_name, exist_ok=True)
         print(f"Storing comparison #{idx+1} in folder: {folder_name}")
         
-        # Save boards as SVG files (full screen size)
+        # Save boards as SVG files (full-screen size)
         svg1, svg2 = visualize_positions(comp["pos1"], comp["pos2"])
         with open(os.path.join(folder_name, "board1.svg"), "w") as f:
             f.write(svg1)
@@ -428,32 +426,94 @@ def run_experiments(num_positions=50, depth=10, num_sample_pairs=200, top_n=10):
             json.dump(metrics_to_save, f, indent=4)
         print(f"Stored comparison in folder: {folder_name}")
     
-    # ---- Regression Plot: Plot all comparisons (graph vs. engine eval differences) ----
-    # For each comparison, get the aggregate normalized graph diff and the engine eval diff.
+    # ---------------------------
+    # Regression Plot for All Comparisons
+    # ---------------------------
+    # For each comparison, get the aggregate normalized graph diff (x) and engine eval diff (y)
     x_vals = np.array([comp["aggregate_norm_graph"] for comp in comparisons])
     y_vals = np.array([comp["eval_diff"] for comp in comparisons])
+    comp_indices = np.arange(1, len(comparisons) + 1)
     
-    plt.figure(figsize=(10, 6))
-    scatter = plt.scatter(x_vals, y_vals, c=y_vals, cmap='viridis', alpha=0.7, edgecolors='k')
-    plt.xlabel("Aggregate Normalized Graph Diff")
-    plt.ylabel("Engine Eval Diff")
-    plt.title("Regression Plot: Graph-based Similarity vs. Engine Evaluation Difference")
-    plt.colorbar(scatter, label="Engine Eval Diff")
-    
-    # Compute linear regression
-    if len(x_vals) > 1:
-        coeffs = np.polyfit(x_vals, y_vals, 1)
-        poly_eqn = np.poly1d(coeffs)
-        x_line = np.linspace(min(x_vals), max(x_vals), 100)
-        plt.plot(x_line, poly_eqn(x_line), color='red', linewidth=2, label=f"Regression Line\ny={coeffs[0]:.2f}x+{coeffs[1]:.2f}")
-        plt.legend()
-    
+    plt.figure(figsize=(12, 6))
+    plt.scatter(comp_indices, x_vals, color='red', label='Graph Metric', s=50, alpha=0.7, marker='o')
+    plt.scatter(comp_indices, y_vals, color='blue', label='Engine Eval Diff', s=50, alpha=0.7, marker='^')
+    plt.xlabel("Comparison Index")
+    plt.ylabel("Normalized Score")
+    plt.title("Regression Plot: Comparison Index vs. Graph Metric & Engine Eval Diff")
+    plt.legend()
     plt.tight_layout()
-    plt.savefig(os.path.join(base_output_dir, "regression_plot.png"))
+    regression_plot_path = os.path.join(base_output_dir, "regression_plot.png")
+    plt.savefig(regression_plot_path)
     plt.show()
-    print(f"Saved regression plot to {os.path.join(base_output_dir, 'regression_plot.png')}")
+    print(f"Saved regression plot to {regression_plot_path}")
+
+# ---------------------------
+# Compute an Individual Board's Graph Metric
+# ---------------------------
+def compute_board_metric(position):
+    control_score = control_refinement(control_functor(position))
+    threat_score = threat_refinement(threat_functor(position))
+    strategic_score = strategic_refinement(strategic_functor(position))
+    hybrid_score = hybrid_refinement([control_functor(position), threat_functor(position), strategic_functor(position)])
+    return control_score + threat_score + strategic_score + hybrid_score
+
+# ---------------------------
+# Plot Regression for All Boards
+# ---------------------------
+def plot_board_metrics(num_positions=150, depth=25):
+    positions = generate_random_positions(num_positions, depth)
+    if not positions:
+        print("No valid positions generated for board metrics plot.")
+        return
+    board_indices = np.arange(1, len(positions)+1)
+    engine_evals = []
+    graph_metrics = []
+    for pos in positions:
+        eval_val = normalize_eval(evaluator(pos))
+        graph_val = compute_board_metric(pos)
+        engine_evals.append(eval_val)
+        graph_metrics.append(graph_val)
     
-    print(f"Stored {len(sorted_comparisons)} comparisons sorted from most similar to least similar based on combined score.")
+    plt.figure(figsize=(12, 6))
+    # Plot engine evals (blue triangles) and graph metrics (red circles)
+    plt.scatter(board_indices, engine_evals, color='blue', label='Engine Eval', s=60, marker='^')
+    plt.scatter(board_indices, graph_metrics, color='red', label='Graph Metric', s=60, marker='o')
+    plt.xlabel("Board Number")
+    plt.ylabel("Score")
+    plt.title("Board Metrics: Engine Eval vs. Graph Metric")
+    plt.legend()
+    
+    # Perform linear regression: regress engine_evals against graph_metrics
+    coeffs = np.polyfit(graph_metrics, engine_evals, 1)
+    poly_eqn = np.poly1d(coeffs)
+    x_line = np.linspace(min(graph_metrics), max(graph_metrics), 100)
+    y_line = poly_eqn(x_line)
+    
+    # Calculate regression error metrics: RMSE and R²
+    y_pred = poly_eqn(np.array(graph_metrics))
+    residuals = np.array(engine_evals) - y_pred
+    rmse = np.sqrt(np.mean(residuals**2))
+    ss_res = np.sum((np.array(engine_evals) - y_pred)**2)
+    ss_tot = np.sum((np.array(engine_evals) - np.mean(engine_evals))**2)
+    r_squared = 1 - ss_res/ss_tot if ss_tot != 0 else 0
+    
+    # Print regression metrics to console
+    print("Regression Metrics:")
+    print(f"  Slope: {coeffs[0]:.4f}")
+    print(f"  Intercept: {coeffs[1]:.4f}")
+    print(f"  RMSE: {rmse:.4f}")
+    print(f"  R²: {r_squared:.4f}")
+    
+    plt.plot(x_line, y_line, color='green', linewidth=2, 
+             label=f"Regression Line\ny={coeffs[0]:.2f}x+{coeffs[1]:.2f}\nRMSE={rmse:.2f}, R²={r_squared:.2f}")
+    plt.legend()
+    
+    regression_plot_path = os.path.join("/Users/ashutoshganguly/Desktop/Research Papers/abid_ashutosh_papers/chess_board_distance/deepseekr1/", "board_metrics_regression.png")
+    plt.tight_layout()
+    plt.savefig(regression_plot_path)
+    plt.show()
+    print(f"Saved board metrics regression plot to {regression_plot_path}")
+
 
 # ---------------------------
 # Initialization and Execution
@@ -472,4 +532,8 @@ strategic_refinement = AlgebraicStrategicRefinementFunctor()
 hybrid_refinement    = AlgebraicHybridRefinementFunctor()
 
 if __name__ == "__main__":
-    run_experiments(num_positions=150, depth=25, num_sample_pairs=100, top_n=10)
+    # Run experiments to store top comparisons
+    #run_experiments(num_positions=150, depth=25, num_sample_pairs=300, top_n=10)
+    
+    # Plot regression for all boards (individual board metrics vs engine evals)
+    plot_board_metrics(num_positions=500, depth=20)
