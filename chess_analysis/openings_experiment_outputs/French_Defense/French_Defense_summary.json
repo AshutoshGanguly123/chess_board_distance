@@ -1,0 +1,595 @@
+{
+    "opening": "French Defense",
+    "moves_used": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Bb4",
+        "e5",
+        "h6",
+        "Bh4",
+        "O-O",
+        "Nge2",
+        "c5",
+        "a3"
+    ],
+    "average_metrics": {
+        "white": {
+            "control": {
+                "fiedler": 0.06148811923368322,
+                "fiedler_centrality": 0.6851453205410775
+            },
+            "threat": {
+                "spectral_radius": 0.8461538461538461,
+                "threat_centrality": 0.6752441994655403
+            },
+            "hybrid": 11.45760257856456,
+            "eval": 1.09,
+            "strategic": {
+                "central_dominance": 0.4855993706592849,
+                "king_shelter": 0.0,
+                "coordination": 0.6166666666666666,
+                "mobility_synergy": 0.4871794871794872,
+                "imbalance": 1.6428571428571428
+            }
+        },
+        "black": {
+            "control": {
+                "fiedler": 2.8244112343492304e-16,
+                "fiedler_centrality": 0.6804591052786125
+            },
+            "threat": {
+                "spectral_radius": 0.23076923076923078,
+                "threat_centrality": 0.8554861802738186
+            },
+            "hybrid": 12.016892384041464,
+            "eval": -1.09,
+            "strategic": {
+                "central_dominance": 0.4701506711581438,
+                "king_shelter": 0.0,
+                "coordination": 0.6941391941391941,
+                "mobility_synergy": 0.48205128205128206,
+                "imbalance": 1.6794871794871797
+            }
+        }
+    },
+    "move_by_move_metrics": [
+        {
+            "white": {
+                "control": {
+                    "fiedler": -1.457171956040795e-16,
+                    "fiedler_centrality": 0.3333333333333343
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 0.0
+                },
+                "strategic": {
+                    "central_dominance": 0.5127253919438324,
+                    "king_shelter": 0.0,
+                    "coordination": 0.8,
+                    "mobility_synergy": 0.6,
+                    "imbalance": 1.25
+                },
+                "hybrid": 0.0,
+                "eval": 0.31
+            },
+            "black": {
+                "control": {
+                    "fiedler": -1.6244545258470375e-16,
+                    "fiedler_centrality": 0.5742153344396038
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 0.0
+                },
+                "strategic": {
+                    "central_dominance": 0.49184214107365914,
+                    "king_shelter": 0.0,
+                    "coordination": 0.7222222222222222,
+                    "mobility_synergy": 0.5333333333333333,
+                    "imbalance": 1.5
+                },
+                "hybrid": 0.0,
+                "eval": -0.31
+            },
+            "move_number": 3
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": -1.457171956040795e-16,
+                    "fiedler_centrality": 0.3333333333333343
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.5127253919438324,
+                    "king_shelter": 0.0,
+                    "coordination": 0.8,
+                    "mobility_synergy": 0.6,
+                    "imbalance": 1.25
+                },
+                "hybrid": 6.740938811152401,
+                "eval": 0.4
+            },
+            "black": {
+                "control": {
+                    "fiedler": -3.072384977142888e-16,
+                    "fiedler_centrality": 0.5752552961486042
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.49184214107365914,
+                    "king_shelter": 0.0,
+                    "coordination": 0.7222222222222222,
+                    "mobility_synergy": 0.5333333333333333,
+                    "imbalance": 1.5
+                },
+                "hybrid": 8.67778375492345,
+                "eval": -0.4
+            },
+            "move_number": 4
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": -5.55111481564881e-17,
+                    "fiedler_centrality": 0.5773502578762255
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 12.096532139837485,
+                "eval": 0.38
+            },
+            "black": {
+                "control": {
+                    "fiedler": -3.072384977142888e-16,
+                    "fiedler_centrality": 0.5752552961486042
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.49184214107365914,
+                    "king_shelter": 0.0,
+                    "coordination": 0.7222222222222222,
+                    "mobility_synergy": 0.5333333333333333,
+                    "imbalance": 1.5
+                },
+                "hybrid": 8.67778375492345,
+                "eval": -0.38
+            },
+            "move_number": 5
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": -5.55111481564881e-17,
+                    "fiedler_centrality": 0.5773502578762255
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 12.096532139837485,
+                "eval": 0.31
+            },
+            "black": {
+                "control": {
+                    "fiedler": 4.445947032146142e-16,
+                    "fiedler_centrality": 0.2769850599730972
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.46734715535128507,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 16.836989157138092,
+                "eval": -0.31
+            },
+            "move_number": 6
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 11.600606143897027,
+                "eval": 0.34
+            },
+            "black": {
+                "control": {
+                    "fiedler": 4.445947032146142e-16,
+                    "fiedler_centrality": 0.2769850599730972
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.46734715535128507,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 16.836989157138092,
+                "eval": -0.34
+            },
+            "move_number": 7
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 11.600606143897027,
+                "eval": 0.63
+            },
+            "black": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.46734715535128507,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 16.6536146749986,
+                "eval": -0.63
+            },
+            "move_number": 8
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 11.401132009670487,
+                "eval": 0.55
+            },
+            "black": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.46734715535128507,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 11.775883867959312,
+                "eval": -0.55
+            },
+            "move_number": 9
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 13.044295142323408,
+                "eval": 0.59
+            },
+            "black": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.46734715535128507,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 11.46990504529312,
+                "eval": -0.59
+            },
+            "move_number": 10
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": -2.2002470070743406e-16,
+                    "fiedler_centrality": 0.5772625058753631
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 11.43361701887255,
+                "eval": -0.39
+            },
+            "black": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 1.0
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.46734715535128507,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 11.469905045293117,
+                "eval": 0.39
+            },
+            "move_number": 11
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": -2.2002470070743406e-16,
+                    "fiedler_centrality": 0.5772625058753631
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 11.43361701887255,
+                "eval": 3.94
+            },
+            "black": {
+                "control": {
+                    "fiedler": 1.779733823119026e-15,
+                    "fiedler_centrality": 0.5765293797829301
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.4627981061457285,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 11.960925263458519,
+                "eval": -3.94
+            },
+            "move_number": 12
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.2683160727826133,
+                    "fiedler_centrality": 0.6511828027400939
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 15.899355280465379,
+                "eval": 1.41
+            },
+            "black": {
+                "control": {
+                    "fiedler": 1.779733823119026e-15,
+                    "fiedler_centrality": 0.5765293797829301
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.4627981061457285,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6904761904761905,
+                    "mobility_synergy": 0.47619047619047616,
+                    "imbalance": 1.75
+                },
+                "hybrid": 11.960925263458519,
+                "eval": -1.41
+            },
+            "move_number": 13
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.2683160727826133,
+                    "fiedler_centrality": 0.6511828027400939
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 15.899355280465377,
+                "eval": 3.07
+            },
+            "black": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 0.7071067811865475
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.4533765787178616,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6666666666666666,
+                    "mobility_synergy": 0.42857142857142855,
+                    "imbalance": 1.6666666666666667
+                },
+                "hybrid": 12.384528226477649,
+                "eval": -3.07
+            },
+            "move_number": 14
+        },
+        {
+            "white": {
+                "control": {
+                    "fiedler": 0.26271340447265595,
+                    "fiedler_centrality": 0.628631367383975
+                },
+                "threat": {
+                    "spectral_radius": 1.0,
+                    "threat_centrality": 0.7071067811865475
+                },
+                "strategic": {
+                    "central_dominance": 0.4806673667893671,
+                    "king_shelter": 0.0,
+                    "coordination": 0.5833333333333334,
+                    "mobility_synergy": 0.4666666666666667,
+                    "imbalance": 1.7142857142857142
+                },
+                "hybrid": 15.702246392048108,
+                "eval": 2.63
+            },
+            "black": {
+                "control": {
+                    "fiedler": 0.0,
+                    "fiedler_centrality": 0.7071067811865475
+                },
+                "threat": {
+                    "spectral_radius": 0.0,
+                    "threat_centrality": 1.0
+                },
+                "strategic": {
+                    "central_dominance": 0.4533765787178616,
+                    "king_shelter": 0.0,
+                    "coordination": 0.6666666666666666,
+                    "mobility_synergy": 0.42857142857142855,
+                    "imbalance": 1.6666666666666667
+                },
+                "hybrid": 17.514367781477105,
+                "eval": -2.63
+            },
+            "move_number": 15
+        }
+    ]
+}

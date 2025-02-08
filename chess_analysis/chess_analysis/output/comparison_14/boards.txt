@@ -1,0 +1,5 @@
+Position 1 FEN:
+rnbq1bnr/2pp1k1p/4p2B/p4p2/1pPP4/N6P/PPQ1PPP1/R3KBNR b KQ - 3 8
+
+Position 2 FEN:
+rn2kbnr/p1q1pppp/b7/1ppp4/1P3PPP/5N2/P1PPPR2/RNBQKB2 b Q - 4 8

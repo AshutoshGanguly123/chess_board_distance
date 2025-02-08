@@ -1,0 +1,589 @@
+{
+    "event": "Magnus Carlsen Chess Tour Finals",
+    "round": "1.11",
+    "white": "Daniil Dubov",
+    "black": "Hikaru Nakamura",
+    "result": "1-0",
+    "dubov_color": "white",
+    "opponent": "Hikaru Nakamura",
+    "moves_used": [
+        "d2d4",
+        "g8f6",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "f8b4",
+        "g1f3",
+        "e8g8",
+        "c1g5",
+        "c7c5",
+        "a1c1",
+        "h7h6",
+        "g5h4",
+        "c5d4",
+        "f3d4",
+        "d7d5",
+        "c4d5",
+        "g7g5",
+        "h4g3",
+        "f6d5",
+        "e2e3",
+        "d8a5",
+        "f1d3",
+        "f8d8",
+        "e1g1",
+        "d5c3",
+        "d1h5",
+        "b4f8",
+        "c1c3",
+        "e6e5",
+        "d3c4",
+        "a5c7",
+        "g3e5"
+    ],
+    "average_metrics": {
+        "white": {
+            "control": 0.7731257310903391,
+            "threat": 1.0573604707436133,
+            "strategic": 3.3399297350492616,
+            "hybrid": 12.621523215701165,
+            "eval": 1.5
+        },
+        "black": {
+            "control": 0.6522520755397881,
+            "threat": 1.3082693285840012,
+            "strategic": 3.257469178320274,
+            "hybrid": 12.48775710281808,
+            "eval": -1.5
+        }
+    },
+    "move_by_move_metrics": [
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 0.0,
+                "strategic": 3.2473976966292146,
+                "hybrid": 0.0,
+                "eval": 0.25
+            },
+            "black": {
+                "control": 0.8758965030968358,
+                "threat": 0.0,
+                "strategic": 3.2449530810750815,
+                "hybrid": 0.0,
+                "eval": -0.25
+            },
+            "move_number": 3
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 0.0,
+                "strategic": 3.2473976966292146,
+                "hybrid": 0.0,
+                "eval": 0.25
+            },
+            "black": {
+                "control": 0.8831105864838863,
+                "threat": 0.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 0.0,
+                "eval": -0.25
+            },
+            "move_number": 4
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 0.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 0.0,
+                "eval": 0.26
+            },
+            "black": {
+                "control": 0.8831105864838863,
+                "threat": 0.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 0.0,
+                "eval": -0.26
+            },
+            "move_number": 5
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 0.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 0.0,
+                "eval": 0.21
+            },
+            "black": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 13.582350007763115,
+                "eval": -0.21
+            },
+            "move_number": 6
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 0.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 0.0,
+                "eval": 0.18
+            },
+            "black": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 13.582350007763115,
+                "eval": -0.18
+            },
+            "move_number": 7
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 0.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 0.0,
+                "eval": 0.17
+            },
+            "black": {
+                "control": 0.8719636553142872,
+                "threat": 1.0,
+                "strategic": 3.379464772812395,
+                "hybrid": 12.909030427081735,
+                "eval": -0.17
+            },
+            "move_number": 8
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 13.795827447298134,
+                "eval": 0.15
+            },
+            "black": {
+                "control": 0.8719636553142872,
+                "threat": 1.0,
+                "strategic": 3.379464772812395,
+                "hybrid": 12.909030427081735,
+                "eval": -0.15
+            },
+            "move_number": 9
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 13.795827447298153,
+                "eval": 0.2
+            },
+            "black": {
+                "control": 0.7071067811865475,
+                "threat": 1.0,
+                "strategic": 3.2152813406226235,
+                "hybrid": 13.465879018665538,
+                "eval": -0.2
+            },
+            "move_number": 10
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 14.1662166129954,
+                "eval": 0.06
+            },
+            "black": {
+                "control": 0.7071067811865475,
+                "threat": 1.0,
+                "strategic": 3.2152813406226235,
+                "hybrid": 13.465879018665538,
+                "eval": -0.06
+            },
+            "move_number": 11
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 20.034055661613145,
+                "eval": 0.09
+            },
+            "black": {
+                "control": 0.2672612419124261,
+                "threat": 1.0,
+                "strategic": 3.2152813406226235,
+                "hybrid": 12.80820481836878,
+                "eval": -0.09
+            },
+            "move_number": 12
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 1.0,
+                "strategic": 3.2016815437651323,
+                "hybrid": 14.095675634208089,
+                "eval": 0.0
+            },
+            "black": {
+                "control": 0.2672612419124261,
+                "threat": 1.0,
+                "strategic": 3.2152813406226235,
+                "hybrid": 12.808204818368779,
+                "eval": -0.0
+            },
+            "move_number": 13
+        },
+        {
+            "white": {
+                "control": 1.0,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2016815437651323,
+                "hybrid": 19.2183311274655,
+                "eval": 0.08
+            },
+            "black": {
+                "control": 0.2567275185652343,
+                "threat": 1.7071067811865475,
+                "strategic": 3.379464772812395,
+                "hybrid": 17.19917411832764,
+                "eval": -0.08
+            },
+            "move_number": 14
+        },
+        {
+            "white": {
+                "control": 0.2672612419124251,
+                "threat": 1.0,
+                "strategic": 3.384013822017952,
+                "hybrid": 12.90702613167305,
+                "eval": 0.0
+            },
+            "black": {
+                "control": 0.8615200047643785,
+                "threat": 1.0,
+                "strategic": 3.379464772812395,
+                "hybrid": 12.161652649877642,
+                "eval": -0.0
+            },
+            "move_number": 15
+        },
+        {
+            "white": {
+                "control": 0.2672612419124251,
+                "threat": 1.7071067811865475,
+                "strategic": 3.384013822017952,
+                "hybrid": 18.253291405316002,
+                "eval": -0.04
+            },
+            "black": {
+                "control": 0.5773200869120322,
+                "threat": 1.0,
+                "strategic": 3.379464772812395,
+                "hybrid": 11.790684916727203,
+                "eval": 0.04
+            },
+            "move_number": 16
+        },
+        {
+            "white": {
+                "control": 0.8725067138313014,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2449530810750815,
+                "hybrid": 16.12721254473043,
+                "eval": -0.04
+            },
+            "black": {
+                "control": 0.5772935392242028,
+                "threat": 2.121320343559643,
+                "strategic": 3.379464772812395,
+                "hybrid": 18.622622760166962,
+                "eval": 0.04
+            },
+            "move_number": 17
+        },
+        {
+            "white": {
+                "control": 0.8725067138313014,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2449530810750815,
+                "hybrid": 16.12721254473043,
+                "eval": -0.03
+            },
+            "black": {
+                "control": 0.5760326269846213,
+                "threat": 2.121320343559643,
+                "strategic": 3.379464772812395,
+                "hybrid": 17.120929895338048,
+                "eval": 0.03
+            },
+            "move_number": 18
+        },
+        {
+            "white": {
+                "control": 0.6815009754284731,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2449530810750815,
+                "hybrid": 16.13459707967299,
+                "eval": -0.01
+            },
+            "black": {
+                "control": 0.5760326269846213,
+                "threat": 2.121320343559643,
+                "strategic": 3.379464772812395,
+                "hybrid": 17.120929895338044,
+                "eval": 0.01
+            },
+            "move_number": 19
+        },
+        {
+            "white": {
+                "control": 0.7164774475562858,
+                "threat": 1.0,
+                "strategic": 3.2449530810750815,
+                "hybrid": 11.27593096438117,
+                "eval": 0.83
+            },
+            "black": {
+                "control": 0.5768506842359489,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2420904725560655,
+                "hybrid": 13.885833981926536,
+                "eval": -0.83
+            },
+            "move_number": 20
+        },
+        {
+            "white": {
+                "control": 0.6193281200498723,
+                "threat": 1.0,
+                "strategic": 3.421315409319539,
+                "hybrid": 9.232063781150694,
+                "eval": 1.01
+            },
+            "black": {
+                "control": 0.5768506842359489,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2420904725560655,
+                "hybrid": 15.887099333988722,
+                "eval": -1.01
+            },
+            "move_number": 21
+        },
+        {
+            "white": {
+                "control": 0.6193281200498723,
+                "threat": 1.0,
+                "strategic": 3.421315409319539,
+                "hybrid": 9.232063781150694,
+                "eval": 1.42
+            },
+            "black": {
+                "control": 0.6832559412693796,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2420904725560655,
+                "hybrid": 15.739107881010646,
+                "eval": -1.42
+            },
+            "move_number": 22
+        },
+        {
+            "white": {
+                "control": 0.27735009811261674,
+                "threat": 1.0,
+                "strategic": 3.484463223878951,
+                "hybrid": 10.666355740516586,
+                "eval": 1.53
+            },
+            "black": {
+                "control": 0.6832559412693796,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2420904725560655,
+                "hybrid": 15.739107881010646,
+                "eval": -1.53
+            },
+            "move_number": 23
+        },
+        {
+            "white": {
+                "control": 0.27735009811261674,
+                "threat": 1.0,
+                "strategic": 3.484463223878951,
+                "hybrid": 10.666355740516586,
+                "eval": 2.4
+            },
+            "black": {
+                "control": 0.28702638259736846,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2420904725560655,
+                "hybrid": 16.672795653944615,
+                "eval": -2.4
+            },
+            "move_number": 24
+        },
+        {
+            "white": {
+                "control": 0.589626524948603,
+                "threat": 1.0,
+                "strategic": 3.4804828058240886,
+                "hybrid": 12.33301719535974,
+                "eval": 2.87
+            },
+            "black": {
+                "control": 0.28702638259736846,
+                "threat": 1.7071067811865475,
+                "strategic": 3.2420904725560655,
+                "hybrid": 16.672795653944615,
+                "eval": -2.87
+            },
+            "move_number": 25
+        },
+        {
+            "white": {
+                "control": 0.9867331256161158,
+                "threat": 1.7071067811865475,
+                "strategic": 3.329952241679451,
+                "hybrid": 16.02086790141562,
+                "eval": 2.99
+            },
+            "black": {
+                "control": 0.5773535384925458,
+                "threat": 1.7071067811865475,
+                "strategic": 2.99454413789176,
+                "hybrid": 13.287485191706116,
+                "eval": -2.99
+            },
+            "move_number": 26
+        },
+        {
+            "white": {
+                "control": 0.9941689649071465,
+                "threat": 1.7071067811865475,
+                "strategic": 3.329952241679451,
+                "hybrid": 19.080996694600326,
+                "eval": 2.97
+            },
+            "black": {
+                "control": 0.5773535384925458,
+                "threat": 1.7071067811865475,
+                "strategic": 2.99454413789176,
+                "hybrid": 11.613687906803982,
+                "eval": -2.97
+            },
+            "move_number": 27
+        },
+        {
+            "white": {
+                "control": 0.9941689649071465,
+                "threat": 1.7071067811865475,
+                "strategic": 3.329952241679451,
+                "hybrid": 19.080996694600326,
+                "eval": 3.46
+            },
+            "black": {
+                "control": 0.737992376756481,
+                "threat": 1.7071067811865475,
+                "strategic": 2.99454413789176,
+                "hybrid": 11.980615004704285,
+                "eval": -3.46
+            },
+            "move_number": 28
+        },
+        {
+            "white": {
+                "control": 0.28859009380015943,
+                "threat": 1.0,
+                "strategic": 3.4804828058240886,
+                "hybrid": 19.6635629797409,
+                "eval": 3.67
+            },
+            "black": {
+                "control": 0.7550263418418869,
+                "threat": 1.0,
+                "strategic": 3.2420904725560655,
+                "hybrid": 11.42959495571258,
+                "eval": -3.67
+            },
+            "move_number": 29
+        },
+        {
+            "white": {
+                "control": 0.28859009380015943,
+                "threat": 1.0,
+                "strategic": 3.4804828058240886,
+                "hybrid": 19.663562979740966,
+                "eval": 3.82
+            },
+            "black": {
+                "control": 0.6081948370998447,
+                "threat": 1.7071067811865475,
+                "strategic": 3.1563567230560534,
+                "hybrid": 9.54776526776493,
+                "eval": -3.82
+            },
+            "move_number": 30
+        },
+        {
+            "white": {
+                "control": 0.7741257005625568,
+                "threat": 1.7071067811865475,
+                "strategic": 3.5569480072892903,
+                "hybrid": 20.211581828276422,
+                "eval": 4.48
+            },
+            "black": {
+                "control": 0.6081948370998447,
+                "threat": 1.7071067811865475,
+                "strategic": 3.1563567230560534,
+                "hybrid": 9.54776526776493,
+                "eval": -4.48
+            },
+            "move_number": 31
+        },
+        {
+            "white": {
+                "control": 0.7741257005625568,
+                "threat": 1.7071067811865475,
+                "strategic": 3.5569480072892903,
+                "hybrid": 20.211581828276422,
+                "eval": 6.36
+            },
+            "black": {
+                "control": 0.7482136105379954,
+                "threat": 1.7071067811865475,
+                "strategic": 3.1563567230560534,
+                "hybrid": 13.01681008501141,
+                "eval": -6.36
+            },
+            "move_number": 32
+        },
+        {
+            "white": {
+                "control": 0.8058977238988776,
+                "threat": 1.7071067811865475,
+                "strategic": 3.5569480072892903,
+                "hybrid": 19.273007940008373,
+                "eval": 6.91
+            },
+            "black": {
+                "control": 0.7535118088806756,
+                "threat": 1.0,
+                "strategic": 3.1563567230560534,
+                "hybrid": 12.553083342532545,
+                "eval": -6.91
+            },
+            "move_number": 33
+        }
+    ]
+}
